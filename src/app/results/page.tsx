@@ -121,13 +121,13 @@ export default function ResultsPage() {
                   </div>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {cs.metrics.map((m, j) => (
                       <div key={j} className="bg-card-bg border border-border-color rounded-xl p-4 text-center shadow-sm">
-                        <div className="text-3xl font-bold text-text-primary mb-1">
+                        <div className="text-3xl lg:text-4xl font-bold text-text-primary mb-1">
                           <AnimatedCounter end={m.value} suffix={m.suffix} />
                         </div>
-                        <p className="text-text-secondary text-xs leading-tight">{m.label}</p>
+                        <p className="text-text-secondary text-xs sm:text-sm leading-tight">{m.label}</p>
                       </div>
                     ))}
                   </div>

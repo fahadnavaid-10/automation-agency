@@ -108,14 +108,14 @@ export default function HowItWorksPage() {
             <div className="space-y-6">
               {stages.map((stage, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
-                  <div className="flex gap-6 md:gap-8 items-start">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 items-start">
                     {/* Step indicator */}
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full glass border border-accent-teal/20 bg-accent-teal/5 flex flex-col items-center justify-center z-10 relative">
-                      <span className="text-2xl">{stage.icon}</span>
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full glass border border-accent-teal/20 bg-accent-teal/5 flex flex-col items-center justify-center z-10 relative mb-1 sm:mb-0">
+                      <span className="text-xl sm:text-2xl">{stage.icon}</span>
                     </div>
 
                     {/* Content */}
-                    <div className={`flex-1 glass rounded-2xl p-6 border ${stage.border} card-glow`}>
+                    <div className={`flex-1 w-full glass rounded-2xl p-5 sm:p-6 border ${stage.border} card-glow`}>
                       <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                         <div>
                           <span className="text-xs text-accent-teal font-bold tracking-widest">STEP {stage.num}</span>
