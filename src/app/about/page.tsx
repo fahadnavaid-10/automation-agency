@@ -4,8 +4,8 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn';
 import { ArrowRight, CheckCircle, X } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About — Emperor Workflows',
-  description: 'We\'re automation specialists who actually understand accounting. Learn our story, our values, and why Emperor Workflows is different from generic tech agencies.',
+  title: 'About — Emperor Automations',
+  description: 'We\'re automation specialists who actually understand accounting. Learn our story, our values, and why Emperor Automations is different from generic tech agencies.',
 };
 
 const values = [
@@ -83,7 +83,7 @@ export default function AboutPage() {
                     Between practice management tools, tax software, and overflowing inboxes, data gets trapped in silos. The solution isn&apos;t adding another app to your tech stack; it&apos;s seamlessly connecting the ones you already use so they operate on autopilot.
                   </p>
                   <p>
-                    That&apos;s why we built Emperor Workflows exclusively for accounting and bookkeeping firms. We bring that same transformation to practices across the UK and US, giving firm owners their time back and empowering teams to focus on high-value client advisory instead of administrative busywork.
+                    That&apos;s why we built Emperor Automations exclusively for accounting and bookkeeping firms. We bring that same transformation to practices across the UK and US, giving firm owners their time back and empowering teams to focus on high-value client advisory instead of administrative busywork.
                   </p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h3 className="text-text-primary font-bold text-lg">Founder &amp; Lead Automation Architect</h3>
-                      <p className="text-accent-teal text-sm font-medium">Emperor Workflows</p>
+                      <p className="text-accent-teal text-sm font-medium">Emperor Automations</p>
                     </div>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h3 className="text-text-primary font-bold text-lg">Follow Us on LinkedIn</h3>
-                      <p className="text-accent-teal text-sm font-medium">Emperor Workflows</p>
+                      <p className="text-accent-teal text-sm font-medium">Emperor Automations</p>
                     </div>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed mb-5">
@@ -190,7 +190,7 @@ export default function AboutPage() {
             <FadeIn>
               <p className="section-label mb-4">Why Us</p>
               <h2 className="text-4xl font-bold text-text-primary mb-3">
-                Emperor Workflows vs Generic Agency
+                Emperor Automations vs Generic Agency
               </h2>
               <p className="text-text-secondary">Not all automation agencies are created equal.</p>
             </FadeIn>
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   {/* Header */}
                   <div className="grid grid-cols-3 bg-card-bg border-b border-border-color px-6 py-4">
                     <div className="text-text-secondary text-xs font-bold uppercase tracking-wider">Feature</div>
-                    <div className="text-center text-accent-teal text-xs font-bold uppercase tracking-wider">Emperor Workflows</div>
+                    <div className="text-center text-accent-teal text-xs font-bold uppercase tracking-wider">Emperor Automations</div>
                     <div className="text-center text-text-secondary text-xs font-bold uppercase tracking-wider">Generic Agency</div>
                   </div>
                   {comparison.map((row, i) => (

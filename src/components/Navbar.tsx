@@ -42,7 +42,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           <Image
             src="/emperor-logo.png"
-            alt="Emperor Workflows Logo"
+            alt="Emperor Automations Logo"
             width={500}
             height={500}
             className="w-auto h-12 sm:h-14 mt-2"

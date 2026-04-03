@@ -123,7 +123,7 @@ export default function HomeClient() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-teal/20 bg-accent-teal/5 mb-8"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-accent-teal pulse-glow" />
-              <span className="text-xs font-medium text-accent-teal tracking-wide">Emperor Workflows · AI Automation for Accounting Firms</span>
+              <span className="text-xs font-medium text-accent-teal tracking-wide">Emperor Automations · AI Automation for Accounting Firms</span>
             </motion.div> */}
 
             {/* Headline */}
@@ -423,7 +423,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* EMPEROR WORKFLOWS AUTHORITY STRIP */}
+      {/* Emperor Automations AUTHORITY STRIP */}
       <section className="py-16 border-t border-border-color bg-bg-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/5 via-transparent to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -431,10 +431,10 @@ export default function HomeClient() {
             <FadeIn direction="left">
               <p className="section-label mb-3">The Agency Behind This</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#00ACD0] mb-4">
-                Built by <span className="text-[#00B4D8]">Emperor Workflows</span>
+                Built by <span className="text-[#00B4D8]">Emperor Automations</span>
               </h2>
               <p className="text-white text-sm leading-relaxed max-w-lg">
-                Emperor Workflows is an AI Automation Agency (AAA) specialising exclusively in eliminating manual labour from professional services firms. We don&apos;t generalise — we architect command-grade workflows built for accountancy.
+                Emperor Automations is an AI Automation Agency (AAA) specialising exclusively in eliminating manual labour from professional services firms. We don&apos;t generalise — we architect command-grade workflows built for accountancy.
               </p>
             </FadeIn>
             <FadeIn direction="right">

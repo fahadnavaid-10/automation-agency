@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { FadeIn } from '@/components/FadeIn';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — Emperor Workflows',
-  description: 'Terms of Service and conditions of use for Emperor Workflows website and services.',
+  title: 'Terms of Service — Emperor Automations',
+  description: 'Terms of Service and conditions of use for Emperor Automations website and services.',
 };
 
 export default function TermsPage() {
@@ -31,39 +31,39 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <FadeIn>
             <div className="glass card-glow rounded-2xl p-8 sm:p-12 border border-border-color space-y-8">
-              
+
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-text-primary">1. Agreement to Terms</h2>
                 <p className="text-sm leading-relaxed text-text-secondary">
-                  By accessing our website and using our services, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our services. Emperor Workflows reserves the right to modify or replace these Terms at any time without prior notice.
+                  By accessing our website and using our services, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our services. Emperor Automations reserves the right to modify or replace these Terms at any time without prior notice.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-text-primary">2. Services Provided</h2>
                 <p className="text-sm leading-relaxed text-text-secondary">
-                  Emperor Workflows operates as an AI Automation Agency specializing in accountancy and professional services. Our services include consultancy, workflow audits, custom software engineering, and software connectivity. The specific scope, pricing, and timeline for any paid service will be mutually agreed upon in a subsequent dedicated service agreement or statement of work.
+                  Emperor Automations operates as an AI Automation Agency specializing in accountancy and professional services. Our services include consultancy, workflow audits, custom software engineering, and software connectivity. The specific scope, pricing, and timeline for any paid service will be mutually agreed upon in a subsequent dedicated service agreement or statement of work.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-text-primary">3. Intellectual Property</h2>
                 <p className="text-sm leading-relaxed text-text-secondary">
-                  The Service and its original content, features, and functionality are and will remain the exclusive property of Emperor Workflows and its licensors. Unless otherwise stated in a specific client contract, custom automations built specifically for your firm will become your intellectual property upon final payment, while underlying proprietary frameworks or core systems remain our property.
+                  The Service and its original content, features, and functionality are and will remain the exclusive property of Emperor Automations and its licensors. Unless otherwise stated in a specific client contract, custom automations built specifically for your firm will become your intellectual property upon final payment, while underlying proprietary frameworks or core systems remain our property.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-text-primary">4. Data and Confidentiality</h2>
                 <p className="text-sm leading-relaxed text-text-secondary">
-                  We frequently interact with highly sensitive accounting data. Both Emperor Workflows and the client agree to maintain strict confidentiality regarding all proprietary information. We do not sell, rent, or recklessly share your data. For specifics on data handling, please refer to our Privacy Policy.
+                  We frequently interact with highly sensitive accounting data. Both Emperor Automations and the client agree to maintain strict confidentiality regarding all proprietary information. We do not sell, rent, or recklessly share your data. For specifics on data handling, please refer to our Privacy Policy.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-text-primary">5. Limitation of Liability</h2>
                 <p className="text-sm leading-relaxed text-text-secondary">
-                  In no event shall Emperor Workflows, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+                  In no event shall Emperor Automations, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
                 </p>
               </div>
 

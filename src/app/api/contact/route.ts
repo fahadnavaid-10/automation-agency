@@ -21,7 +21,7 @@ export async function POST(req: Request) {
             to: process.env.GMAIL_USER,   // Send to yourself
             subject: `New Audit Request from ${fullName} (${company})`,
             html: `
-        <h2>New Audit Request - Emperor Workflows</h2>
+        <h2>New Audit Request - Emperor Automations</h2>
         <p><strong>Name:</strong> ${fullName}</p>
         <p><strong>Company:</strong> ${company}</p>
         <p><strong>Email:</strong> ${email}</p>

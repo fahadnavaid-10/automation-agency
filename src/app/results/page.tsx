@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import AnimatedCounter from '@/components/AnimatedCounter';
 
 export const metadata: Metadata = {
-  title: 'Results — Emperor Workflows',
+  title: 'Results — Emperor Automations',
   description: 'Real results from real accounting firms. See our anonymised case studies and the hours, costs, and errors saved.',
 };
 

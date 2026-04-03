@@ -19,12 +19,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <Image 
-                src="/emperor-logo.png" 
-                alt="Emperor Workflows Logo" 
-                width={120} 
-                height={120} 
-                className="w-auto h-10 sm:h-12 object-contain" 
+              <Image
+                src="/emperor-logo.png"
+                alt="Emperor Automations Logo"
+                width={120}
+                height={120}
+                className="w-auto h-10 sm:h-12 object-contain"
               />
               <span className="text-lg font-bold text-text-light">
                 Emperor<span className="text-gradient"> Workflows</span>
@@ -109,7 +109,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-border-color/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-border-color text-xs">
-            © {new Date().getFullYear()} Emperor Workflows. All rights reserved.
+            © {new Date().getFullYear()} Emperor Automations. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-border-color hover:text-accent-teal text-xs transition-colors">

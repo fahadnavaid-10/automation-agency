@@ -4,7 +4,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn';
 import { CheckCircle, ArrowRight, Zap, BarChart2, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Pricing — Emperor Workflows',
+    title: 'Pricing — Emperor Automations',
     description: 'Transparent pricing for accounting firm automation. Choose from Starter, Growth, or Enterprise tiers — all done for you.',
 };
 
@@ -143,8 +143,8 @@ export default function PricingPage() {
                                         <Link
                                             href="/contact"
                                             className={`px-6 py-3.5 rounded-xl text-sm font-bold inline-flex items-center justify-center gap-2 transition-all duration-200 ${tier.highlight
-                                                    ? 'btn-primary'
-                                                    : 'btn-outline'
+                                                ? 'btn-primary'
+                                                : 'btn-outline'
                                                 }`}
                                         >
                                             {tier.cta} <ArrowRight size={15} />
