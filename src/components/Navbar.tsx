@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
@@ -9,6 +10,7 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/results', label: 'Results' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -37,15 +39,17 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-accent-teal flex items-center justify-center shadow-sm">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8L8 3L13 8L8 13L3 8Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-              <circle cx="8" cy="8" r="2" fill="white" />
-            </svg>
-          </div>
-          <span className="text-lg font-bold tracking-tight text-text-primary">
-            ClearFlow<span className="text-gradient"> AI</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/emperor-logo.png"
+            alt="Emperor Workflows Logo"
+            width={500}
+            height={500}
+            className="w-auto h-12 sm:h-14 mt-2"
+            priority
+          />
+          <span className="text-lg sm:text-xl font-bold tracking-tight text-text-primary">
+            Emperor<span className="text-gradient"> Workflows</span>
           </span>
         </Link>
 

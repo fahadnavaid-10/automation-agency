@@ -116,15 +116,15 @@ export default function HomeClient() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-4xl">
             {/* Badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-teal/20 bg-accent-teal/5 mb-8"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-accent-teal pulse-glow" />
-              <span className="text-xs font-medium text-accent-teal tracking-wide">AI Automation for Accounting Firms</span>
-            </motion.div>
+              <span className="text-xs font-medium text-accent-teal tracking-wide">Emperor Workflows · AI Automation for Accounting Firms</span>
+            </motion.div> */}
 
             {/* Headline */}
             <motion.h1
@@ -134,7 +134,8 @@ export default function HomeClient() {
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-text-light leading-[1.05] mb-6"
             >
               We Automate the{' '}
-              <span className="text-gradient">Repetitive Work</span>{' '}
+              <span className="text-[#029DC0]">Repetitive</span>{' '}
+              <span className="text-[#029DC0]">Work</span>{' '}
               Killing Your Accounting Firm
             </motion.h1>
 
@@ -143,10 +144,9 @@ export default function HomeClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="text-lg sm:text-xl text-border-color mb-10 max-w-2xl leading-relaxed"
+              className="text-lg sm:text-xl text-border-color mb-10 max-w-2xl leading-relaxed text-italic"
             >
-              Custom AI automations built and installed into your practice — done for you, not DIY.
-              We go inside your firm, map every workflow, and build systems that run themselves.
+              Custom AI automations built and installed into your practice. Done for you, not DIY.
             </motion.p>
 
             {/* CTAs */}
@@ -170,10 +170,10 @@ export default function HomeClient() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.55 }}
-              className="flex items-center gap-2 text-sm text-border-color"
+              className="flex items-start sm:items-center gap-2 text-sm text-border-color"
             >
-              <Shield size={14} className="text-accent-teal" />
-              <span>Free 30-min call. No obligation. No tech knowledge needed.</span>
+              <Shield size={14} className="text-accent-teal flex-shrink-0 mt-0.5 sm:mt-0" />
+              <span className="leading-tight">Free 30-min call. No obligation. No tech knowledge needed.</span>
             </motion.div>
           </div>
         </div>
@@ -215,6 +215,33 @@ export default function HomeClient() {
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="text-text-secondary text-sm font-medium">{stat.label}</div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI SNAPSHOT */}
+      <section className="py-16 border-b border-border-color bg-bg-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-teal/5 via-transparent to-accent-teal/5" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-10">
+            <p className="section-label mb-2">The Numbers</p>
+            <h2 className="text-2xl font-bold text-text-primary">Why Firms Choose Automation — By the Numbers</h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { icon: '⏱', value: '14 hrs', label: 'Avg. saved per week per firm', sub: 'Across onboarding, chasing & reporting' },
+              { icon: '💰', value: '4–6 wks', label: 'Typical full ROI payback period', sub: 'Most firms recover fees within a month' },
+              { icon: '📉', value: '80%', label: 'Reduction in late payments', sub: 'After automated invoice chasing goes live' },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.12}>
+                <div className="glass card-glow rounded-2xl p-7 text-center border border-accent-teal/10 hover:border-accent-teal/30 transition-colors duration-300">
+                  <div className="text-4xl mb-3">{item.icon}</div>
+                  <div className="text-4xl font-bold text-gradient mb-2">{item.value}</div>
+                  <p className="text-text-primary text-sm font-semibold mb-1">{item.label}</p>
+                  <p className="text-text-secondary text-xs">{item.sub}</p>
+                </div>
               </FadeIn>
             ))}
           </div>
@@ -396,6 +423,39 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* EMPEROR WORKFLOWS AUTHORITY STRIP */}
+      <section className="py-16 border-t border-border-color bg-bg-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/5 via-transparent to-transparent" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <FadeIn direction="left">
+              <p className="section-label mb-3">The Agency Behind This</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#00ACD0] mb-4">
+                Built by <span className="text-[#00B4D8]">Emperor Workflows</span>
+              </h2>
+              <p className="text-white text-sm leading-relaxed max-w-lg">
+                Emperor Workflows is an AI Automation Agency (AAA) specialising exclusively in eliminating manual labour from professional services firms. We don&apos;t generalise — we architect command-grade workflows built for accountancy.
+              </p>
+            </FadeIn>
+            <FadeIn direction="right">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { icon: '🔍', title: 'We Audit', desc: 'Deep workflow mapping session — no guesswork, only precision.' },
+                  { icon: '⚙️', title: 'We Build', desc: 'Accountancy-only automation. Not a generic tech shop.' },
+                  { icon: '📈', title: 'We Maintain', desc: 'Ongoing support, proactive improvements, as your firm scales.' },
+                ].map((item, i) => (
+                  <div key={i} className="glass card-glow rounded-xl p-5 border border-accent-teal/10 hover:border-accent-teal/30 transition-colors duration-300">
+                    <div className="text-2xl mb-3">{item.icon}</div>
+                    <h3 className="text-text-primary font-bold text-sm mb-1">{item.title}</h3>
+                    <p className="text-text-secondary text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-24 relative overflow-hidden border-t border-border-color bg-bg-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/5 via-transparent to-bg-primary/5" />
@@ -415,7 +475,7 @@ export default function HomeClient() {
                 <ArrowRight size={18} />
               </Link>
             </div>
-            <div className="flex items-center justify-center gap-6 text-sm text-border-color">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-border-color">
               {['Free, no obligation', '30 minutes', 'Clear automation plan'].map((item, i) => (
                 <span key={i} className="flex items-center gap-1.5">
                   <CheckCircle size={13} className="text-accent-teal" />
@@ -426,6 +486,6 @@ export default function HomeClient() {
           </FadeIn>
         </div>
       </section>
-    </div>
+    </div >
   );
 }

@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/results', label: 'Results' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -16,15 +18,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-accent-teal flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8L8 3L13 8L8 13L3 8Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-                  <circle cx="8" cy="8" r="2" fill="white" />
-                </svg>
-              </div>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image 
+                src="/emperor-logo.png" 
+                alt="Emperor Workflows Logo" 
+                width={120} 
+                height={120} 
+                className="w-auto h-10 sm:h-12 object-contain" 
+              />
               <span className="text-lg font-bold text-text-light">
-                ClearFlow<span className="text-gradient"> AI</span>
+                Emperor<span className="text-gradient"> Workflows</span>
               </span>
             </Link>
             <p className="text-border-color text-sm leading-relaxed max-w-xs">
@@ -87,13 +90,26 @@ export default function Footer() {
             >
               Book a Free Audit Call
             </Link>
+            <div className="mt-5 flex items-center gap-2 text-border-color text-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-teal flex-shrink-0">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z" />
+              </svg>
+              <a href="tel:+12017316224" className="hover:text-accent-teal transition-colors">(201) 731-6224</a>
+            </div>
+            <div className="mt-3 flex items-center gap-2 text-border-color text-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-teal flex-shrink-0">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:emperorworkflows@gmail.com" className="hover:text-accent-teal transition-colors">emperorworkflows@gmail.com</a>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-border-color/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-border-color text-xs">
-            © {new Date().getFullYear()} ClearFlow AI. All rights reserved.
+            © {new Date().getFullYear()} Emperor Workflows. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-border-color hover:text-accent-teal text-xs transition-colors">

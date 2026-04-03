@@ -1,12 +1,10 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { FadeIn } from '@/components/FadeIn';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'How It Works — ClearFlow AI',
-  description: 'Our proven 6-stage process: from free workflow audit to automation going live in as little as 2–4 weeks.',
-};
 
 const stages = [
   {
@@ -77,6 +75,10 @@ const faqs = [
 ];
 
 export default function HowItWorksPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (i: number) => setOpenFaq(openFaq === i ? null : i);
+
   return (
     <div className="bg-bg-primary text-text-secondary pt-20">
       {/* Hero */}
@@ -86,11 +88,11 @@ export default function HowItWorksPage() {
           <FadeIn>
             <p className="section-label mb-4">Process</p>
             <h1 className="text-5xl lg:text-6xl font-bold text-text-primary mb-6">
-              A Simple, Proven Process —{' '}
+              A Simple, Proven Process {' '}
               <span className="text-gradient">Audit to Automation in Weeks</span>
             </h1>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              From our first call to your automations going live — here&apos;s exactly how it works, step by step.
+              From our first call to your automations going live, here&apos;s exactly how it works step by step.
             </p>
           </FadeIn>
         </div>
@@ -142,12 +144,29 @@ export default function HowItWorksPage() {
               <h2 className="text-4xl font-bold text-text-primary">Common Questions</h2>
             </FadeIn>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="glass card-glow rounded-xl p-6">
-                  <h3 className="text-text-primary font-semibold mb-2">{faq.q}</h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">{faq.a}</p>
+              <FadeIn key={i} delay={i * 0.04}>
+                <div className="glass card-glow rounded-xl overflow-hidden border border-border-color">
+                  <button
+                    onClick={() => toggleFaq(i)}
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-accent-teal/5 transition-colors duration-200"
+                    aria-expanded={openFaq === i}
+                  >
+                    <span className="text-text-primary font-semibold text-sm">{faq.q}</span>
+                    <ChevronDown
+                      size={17}
+                      className={`text-accent-teal flex-shrink-0 transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${openFaq === i ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                  >
+                    <p className="px-6 pb-5 text-text-secondary text-sm leading-relaxed border-t border-border-color/50 pt-4">
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
               </FadeIn>
             ))}

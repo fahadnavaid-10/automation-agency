@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
-  title: 'ClearFlow AI — We Automate Accounting Firms',
-  description: 'Custom AI automations built and installed into your accounting practice. Done for you, not DIY. Save 10–20 hours per week.',
+  title: 'Emperor Workflows',
+  description: 'Custom AI automations built and installed into your practice. Save 10–20 hours per week. Done for you, not DIY.',
 };
 
 export default function HomePage() {

@@ -4,8 +4,8 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn';
 import { ArrowRight, CheckCircle, X } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About — ClearFlow AI',
-  description: 'We\'re automation specialists who actually understand accounting. Learn our story, our values, and why we\'re different from generic tech agencies.',
+  title: 'About — Emperor Workflows',
+  description: 'We\'re automation specialists who actually understand accounting. Learn our story, our values, and why Emperor Workflows is different from generic tech agencies.',
 };
 
 const values = [
@@ -65,44 +65,95 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-12 pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn direction="left">
               <div className="glass card-glow rounded-2xl p-8 border border-border-color">
                 <h2 className="text-3xl font-bold text-text-primary mb-5">Our Story</h2>
                 <div className="space-y-4 text-text-secondary text-sm leading-relaxed">
                   <p>
-                    When we first started working with accounting practices, we expected to find technology problems. What we found instead were people problems — talented accountants and their teams buried in repetitive, manual tasks that could — and should — be automated.
+                    When we first started working with accounting practices, we expected to find technology problems. What we found instead were people problems talented accountants and their teams buried in repetitive, manual tasks that could be automated.
                   </p>
                   <p>
-                    Chasing clients for the same documents month after month. Manually entering the same data into three different systems. Sending invoice reminders by hand. Following up on deadlines that should be tracked automatically.
+                    Chasing clients for the same documents month after month. Manually entering the same data into three different systems. Sending invoice reminders by hand.
                   </p>
                   <p>
                     The technology to fix all of this already existed. What was missing was someone who understood both the accounting workflows and how to implement automation properly.
                   </p>
                   <p>
-                    That&apos;s why we built ClearFlow AI — a specialist automation agency exclusively for accounting and bookkeeping firms. We bring that same transformation to practices across the UK and US.
+                    Between practice management tools, tax software, and overflowing inboxes, data gets trapped in silos. The solution isn&apos;t adding another app to your tech stack; it&apos;s seamlessly connecting the ones you already use so they operate on autopilot.
+                  </p>
+                  <p>
+                    That&apos;s why we built Emperor Workflows exclusively for accounting and bookkeeping firms. We bring that same transformation to practices across the UK and US, giving firm owners their time back and empowering teams to focus on high-value client advisory instead of administrative busywork.
                   </p>
                 </div>
               </div>
             </FadeIn>
 
-            <FadeIn direction="right">
-              {/* Team card */}
-              <div className="glass card-glow rounded-2xl p-8 border border-border-color">
-                <div className="flex gap-5 items-start mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-accent-teal flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
-                    CF
+            <div className="flex flex-col gap-6">
+              <FadeIn direction="right">
+                {/* Founder card */}
+                <div className="glass card-glow rounded-2xl p-8 border border-border-color">
+                  <div className="flex gap-5 items-start mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-accent-teal flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
+                      EW
+                    </div>
+                    <div>
+                      <h3 className="text-text-primary font-bold text-lg">Founder &amp; Lead Automation Architect</h3>
+                      <p className="text-accent-teal text-sm font-medium">Emperor Workflows</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-text-primary font-bold text-lg">Founder & Lead Automation Architect</h3>
-                    <p className="text-accent-teal text-sm font-medium">ClearFlow AI</p>
-                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    With years of hands-on experience building automations inside real accounting practices, our founder brings a unique combination of technical expertise and deep knowledge of the accountancy sector. Every automation we build is informed by what actually works in the real world of practice management.
+                  </p>
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  With years of hands-on experience building automations inside real accounting practices, our founder brings a unique combination of technical expertise and deep knowledge of the accountancy sector. Every automation we build is informed by what actually works in the real world of practice management.
-                </p>
-              </div>
-            </FadeIn>
+              </FadeIn>
+
+              <FadeIn direction="right" delay={0.1}>
+                {/* LinkedIn block */}
+                <div className="glass card-glow rounded-2xl p-8 border border-border-color">
+                  <div className="flex gap-4 items-start mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-[#0077b5]/15 border border-[#0077b5]/25 flex items-center justify-center flex-shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-text-primary font-bold text-lg">Follow Us on LinkedIn</h3>
+                      <p className="text-accent-teal text-sm font-medium">Emperor Workflows</p>
+                    </div>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-5">
+                    We share free workflow teardowns, automation breakdowns, and accountancy efficiency insights weekly. Join 500+ accountants following our strategies.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {[
+                      'Free weekly workflow teardowns for accounting firms',
+                      'AI automation tips specific to Xero, QuickBooks & Sage',
+                      'Behind-the-scenes system builds and ROI case studies',
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                        <span className="text-accent-teal text-xs mt-1 flex-shrink-0">→</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline px-5 py-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-2"
+                  >
+                    Connect on LinkedIn
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
@@ -139,36 +190,40 @@ export default function AboutPage() {
             <FadeIn>
               <p className="section-label mb-4">Why Us</p>
               <h2 className="text-4xl font-bold text-text-primary mb-3">
-                ClearFlow AI vs Generic Agency
+                Emperor Workflows vs Generic Agency
               </h2>
               <p className="text-text-secondary">Not all automation agencies are created equal.</p>
             </FadeIn>
           </div>
           <FadeIn>
             <div className="glass card-glow rounded-2xl overflow-hidden shadow-sm">
-              {/* Header */}
-              <div className="grid grid-cols-3 bg-card-bg border-b border-border-color px-6 py-4">
-                <div className="text-text-secondary text-xs font-bold uppercase tracking-wider">Feature</div>
-                <div className="text-center text-accent-teal text-xs font-bold uppercase tracking-wider">ClearFlow AI</div>
-                <div className="text-center text-text-secondary text-xs font-bold uppercase tracking-wider">Generic Agency</div>
-              </div>
-              {comparison.map((row, i) => (
-                <div key={i} className={`grid grid-cols-3 items-center px-6 py-4 ${i < comparison.length - 1 ? 'border-b border-border-color' : ''}`}>
-                  <span className="text-text-secondary text-sm">{row.feature}</span>
-                  <div className="flex justify-center">
-                    <CheckCircle size={18} className="text-accent-teal" />
+              <div className="overflow-x-auto">
+                <div className="min-w-[600px]">
+                  {/* Header */}
+                  <div className="grid grid-cols-3 bg-card-bg border-b border-border-color px-6 py-4">
+                    <div className="text-text-secondary text-xs font-bold uppercase tracking-wider">Feature</div>
+                    <div className="text-center text-accent-teal text-xs font-bold uppercase tracking-wider">Emperor Workflows</div>
+                    <div className="text-center text-text-secondary text-xs font-bold uppercase tracking-wider">Generic Agency</div>
                   </div>
-                  <div className="flex justify-center">
-                    {row.generic === true ? (
-                      <CheckCircle size={18} className="text-text-secondary" />
-                    ) : row.generic === false ? (
-                      <X size={18} className="text-border-color" />
-                    ) : (
-                      <span className="text-text-secondary text-xs">{row.generic}</span>
-                    )}
-                  </div>
+                  {comparison.map((row, i) => (
+                    <div key={i} className={`grid grid-cols-3 items-center px-6 py-4 ${i < comparison.length - 1 ? 'border-b border-border-color' : ''}`}>
+                      <span className="text-text-secondary text-sm">{row.feature}</span>
+                      <div className="flex justify-center">
+                        <CheckCircle size={18} className="text-accent-teal" />
+                      </div>
+                      <div className="flex justify-center">
+                        {row.generic === true ? (
+                          <CheckCircle size={18} className="text-text-secondary" />
+                        ) : row.generic === false ? (
+                          <X size={18} className="text-border-color" />
+                        ) : (
+                          <span className="text-text-secondary text-xs">{row.generic}</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </FadeIn>
         </div>

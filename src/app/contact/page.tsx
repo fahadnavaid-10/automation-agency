@@ -26,8 +26,7 @@ export default function ContactPage() {
     setStatus('loading');
 
     try {
-      // Formspree endpoint — replace YOUR_FORM_ID with your actual ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -35,6 +34,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setStatus('success');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         setStatus('error');
       }
@@ -47,6 +47,30 @@ export default function ContactPage() {
     'Free, no obligation',
     '30 minutes — respectful of your time',
     'Clear automation plan you can keep',
+  ];
+
+  const contactDetails = [
+    {
+      icon: (
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z" />
+        </svg>
+      ),
+      label: 'Call or text us',
+      value: '(201) 731-6224',
+      href: 'tel:+12017316224',
+    },
+    {
+      icon: (
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      ),
+      label: 'Email us directly',
+      value: 'emperorworkflows@gmail.com',
+      href: 'mailto:emperorworkflows@gmail.com',
+    },
   ];
 
   if (status === 'success') {
@@ -195,7 +219,12 @@ export default function ContactPage() {
                 </div>
 
                 {status === 'error' && (
-                  <p className="text-red-400 text-sm">Something went wrong. Please try again or email us directly.</p>
+                  <p className="text-red-400 text-sm">
+                    Something went wrong. Please try again or email us at{' '}
+                    <a href="mailto:emperorworkflows@gmail.com" className="underline hover:text-red-300">
+                      emperorworkflows@gmail.com
+                    </a>
+                  </p>
                 )}
 
                 <button
@@ -242,7 +271,7 @@ export default function ContactPage() {
                     'Your biggest manual time-wasters',
                     'Which tools your firm already uses',
                     'The 2–3 automations with the biggest ROI for your practice',
-                    'A rough timeline and next steps',
+
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-accent-teal text-xs mt-1">→</span>
@@ -252,10 +281,21 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              <div className="glass card-glow rounded-2xl p-6 border border-border-color text-center">
-                <div className="text-3xl font-bold text-gradient mb-1">100%</div>
-                <p className="text-text-secondary text-sm">Free. No commitment. No sales pressure.</p>
+              <div className="glass card-glow rounded-2xl p-6 border border-border-color">
+                <h3 className="text-text-primary font-bold text-sm mb-3">Get in Touch Directly</h3>
+                {contactDetails.map((detail, i) => (
+                  <a key={i} href={detail.href} className="flex items-center gap-3 group">
+                    <div className="w-8 h-8 rounded-lg bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal flex-shrink-0">
+                      {detail.icon}
+                    </div>
+                    <div>
+                      <p className="text-text-secondary text-xs">{detail.label}</p>
+                      <p className="text-text-primary text-sm font-semibold group-hover:text-accent-teal transition-colors">{detail.value}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
+
             </FadeIn>
           </div>
         </div>

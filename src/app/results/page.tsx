@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import AnimatedCounter from '@/components/AnimatedCounter';
 
 export const metadata: Metadata = {
-  title: 'Results — ClearFlow AI',
+  title: 'Results — Emperor Workflows',
   description: 'Real results from real accounting firms. See our anonymised case studies and the hours, costs, and errors saved.',
 };
 
@@ -47,6 +47,20 @@ const caseStudies = [
       { value: 0, label: 'Missed deadlines since go-live', suffix: '' },
       { value: 3, label: 'Hours saved per week', suffix: 'hrs' },
       { value: 60, label: 'Clients managed automatically', suffix: '+' },
+    ],
+    color: 'from-accent-teal/10 to-bg-primary/10',
+    border: 'border-accent-teal/15',
+    tag_color: 'bg-accent-teal/10 text-accent-teal border-accent-teal/20',
+  },
+  {
+    tag: 'UK Mid-Size Practice · 20 Staff',
+    title: 'AI Data Extraction & OCR Integration',
+    problem: 'Staff were manually re-keying bank statements, invoices, and receipts into Xero — a painfully slow, error-prone process consuming 8+ hours per week. As client volume grew, so did the data entry backlog.',
+    solution: 'We built an AI-powered OCR pipeline that automatically extracts transaction data from uploaded documents, validates against Xero chart of accounts, and posts confirmed entries — with an exception queue for human review on edge cases only.',
+    metrics: [
+      { value: 92, label: 'Data extraction accuracy', suffix: '%' },
+      { value: 8, label: 'Hours saved per week', suffix: 'hrs' },
+      { value: 4200, label: 'Annual admin cost recovered', suffix: '£' },
     ],
     color: 'from-accent-teal/10 to-bg-primary/10',
     border: 'border-accent-teal/15',
