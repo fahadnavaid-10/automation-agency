@@ -27,7 +27,7 @@ export default function Footer() {
                 className="w-auto h-10 sm:h-12 object-contain"
               />
               <span className="text-lg font-bold text-text-light">
-                Emperor<span className="text-gradient"> Workflows</span>
+                Emperor<span className="text-gradient"> Automations</span>
               </span>
             </Link>
             <p className="text-border-color text-sm leading-relaxed max-w-xs">

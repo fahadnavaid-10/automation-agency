@@ -49,7 +49,7 @@ export default function Navbar() {
             priority
           />
           <span className="text-lg sm:text-xl font-bold tracking-tight text-text-primary">
-            Emperor<span className="text-gradient"> Workflows</span>
+            Emperor<span className="text-gradient"> Automations</span>
           </span>
         </Link>
 
